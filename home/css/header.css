@@ -1,0 +1,143 @@
+
+/*Topo com menu, imagens e função*/
+header{
+  background-color: rgba(236, 218, 218, 0);
+  display: flex;
+  width: 100%;
+  padding-top: 7px;
+  animation: opacit 4s ease-in ;
+  z-index: 1;
+  position: fixed;
+  user-select: none;
+  align-items: center;
+  height: 8.5%;
+}
+/*Div que guarda a img da logo e ela em si */
+.logo-div {   
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 25%;
+  height: 100%;
+}
+.logo-div img{
+  width: 50%;
+  cursor: pointer;
+  transition: all .4s;
+}
+.off {
+  display: none;
+  transition: all 4s;
+}
+/* Menu de opções */
+ul{            
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  border: rgba(255, 255, 255, 0) solid 3px; border-radius: 40px;
+  transition: all 0.4s;
+  width: 50%;
+  height: 70%;
+}
+/*Menu após scrollar*/
+.on-scroll{
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  border: rgba(255, 255, 255, 0) solid 3px; border-radius: 40px;
+  width: 50%;
+  height: 70%;
+}
+/*Botão do menu ativado ex: Home*/
+ul .active{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+ul .active > a{
+  transition: all 0.1s;
+  color: rgb(255, 255, 255);
+}
+ul li{
+  background-color: rgba(255, 255, 255, 0);
+  display: block;
+  margin: 1% 0.5% 1% 1%;
+  width: 20%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  height: 80%;
+  transition: all 0.2s;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+ul li a{
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  border-radius: 40px; 
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+}
+ul li a:active{
+  background-color: rgba(236, 17, 17, 0);
+}
+/*Botão de login*/
+.login{
+  background-color: rgba(231, 231, 231, 0.884);
+  display: block;
+  width: 9%;
+  border: rgba(255, 255, 255, 0) solid 3px; border-radius: 40px;
+  margin-left: 10%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  user-select: none;
+  font-style: normal;
+  height: 48%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.login:active{
+  background-color: rgba(255, 255, 255, 0.10);
+  color: white;
+  border: rgba(255, 255, 255, 0) solid 3px; border-radius: 40px;
+}
+.login:active > a{  
+  color: rgba(202, 202, 202, 0.811);
+}
+
+.login a{
+  background-color: rgba(231, 33, 33, 0);
+  display: block;
+  margin-top: 2.5%;
+  font-size: 17px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 60%;
+  color: rgba(0, 0, 0, 0.961);
+  text-decoration: none;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.login a:active{
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main-page.css">
+  <link rel="stylesheet" href="./css/contato.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/portifolio.css">
+  <link rel="stylesheet" href="./css/serviços.css">
+  <link rel="stylesheet" href="./css/quemSomos.css">
+  <title>Rev</title>
+</head>
+<body>
+  <!--Header-->
+  <header id="header">
+    <!--Div contendo a imagem da logo-->
+    <div onclick="home()" class="logo-div">
+      <img id="imgLogo"  src="../src/logo_rev.png" alt="">
+    </div>
+    <!--Lista das opções do menu-->
+    <ul id="ul">
+      <li onclick="home()" id="li-home" class="active"><a>Home</a></li>
+      <li onclick="sobre()" id="li-sobre"><a>Quem somos</a></li>
+      <li onclick="serviços()" id="li-serviços"><a>Serviços</a></li>
+      <li style="display: none;" onclick="cases()" id="li-cases"><a>Portfólio</a></li>
+      <li onclick="contato()" id="li-contato"><a>Contato</a></li>
+    </ul>
+    <!--Botão de Login-->
+    <div class="login">
+      <a href="../dashboard/index.php">Login</a>
+    </div>
+  </header>
+  <!--Páginas Principais--->
+  <section onscroll="scrollPage()" id="sectionScroll">
+    <!--Páginas de navegação-->
+    <div id="home">
+      <img src="../src/fundo.jpg" alt="">
+      <div class="content">
+        <h1 id="homeH1">Transformando</h1>
+        <h2>A Rev é uma empresa especializada na criação de websites, aplicativos e serviços digitais sob medida, visando oferecer soluções eficientes e personalizadas para seus clientes.</h2>
+        <a onclick="sobre()">Saiba mais</a>
+      </div>
+    </div>
+
+    <div id="sobre">
+      <img src="../src/manequim.jpeg" alt="">
+      <div>
+        <h1>Quem Somos?</h1>
+        <br><br>
+        <p>Bem-vindo à <strong>Rev</strong>, sua parceira de inovação digital.</p>
+        <br>
+        <p>
+          Nos dedicamos a transformar ideias em realidade digital, 
+          desenvolvendo sites e aplicativos com qualidade e criatividade. 
+          Nossa equipe é movida pela paixão em tecnologia, inovação e 
+          pela busca constante em exceder as expectativas dos clientes.
+        </p>
+        <br>
+        <p>
+          <strong>Por que nos escolher?</strong> Oferecemos soluções personalizadas de 
+          alta qualidade, focadas na inovação, com uma parceria baseada 
+          em transparência e confiança. Estamos prontos para elevar o seu 
+          negócio a um novo patamar.
+        </p>
+      </div>
+
+    </div>
+    <div  id="serviços">
+      <img src="../src/fundoServiço.jpeg" alt="">
+      <div>
+        <h1>Serviços</h1>
+        <aside>
+          <div>
+            <div>
+              <div class="divImage"><img src="../src/pc.png" alt=""></div>
+              <h1>Sites</h1>
+              <p>Potencialize sua marca com nossos sites personalizados, que cativam e engajam seu público de forma eficaz.</p>
+              <div><button onclick="contato()">Selecionar</button></div>
+            </div>
+            <div>
+              <div class="divImage"><img id="selula" src="../src/selulá.png" alt=""></div>
+              <h1>Aplicativos</h1>
+              <p>Transforme suas ideias em realidade com nossos apps customizados, proporcionando experiências intuitivas e funcionais.</p>
+              <div><button onclick="contato()">Selecionar</button></div>
+            </div>
+            <div>
+              <div class="divImage"><img src="../src/design.png" alt=""></div>
+              <h1>Identidade Visual</h1>
+              <p>Reforce sua marca com nosso serviço de identidade visual, criando elementos únicos e memoráveis.</p>
+              <div><button onclick="contato()">Selecionar</button></div>
+            </div>
+            <div>
+              <div class="divImage"><img src="../src/foguete do tigrinho.png" alt=""></div>
+              <h1>Landing Page</h1>
+              <p>Maximize conversões com nossas páginas otimizadas, capturando e direcionando seu público para ação.</p>
+              <div><button onclick="contato()">Selecionar</button></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <div style="display: none;" class="navigation" id="cases"><p>Portfólio</p></div>
+    <div id="contato">
+      <img src="../src/45667.jpeg" alt="">
+      <div>
+        <h1>Tem algum projeto? Nós vamos adorar te ajudar.</h1>
+        <div>
+          <ul>
+            <li style="display: none;"  onclick="toggleAside('sobre')" id="asideLiSobre">Sobre</li>
+            <li onclick="toggleAside('contato')" id="asideLiContato">Contato</li>
+          </ul>
+          <aside id="asideContato">
+            <div style="display: none;" id="asideContatoSobre">Preencha os campos e nos envie uma mensagem</div>
+            <div id="asideContatoContato">
+              <div id="checkBoxDiv">
+                <p>Estou interessado em...</p>
+                <input type="checkbox" name="itemcheck" id="checkboxSite" value="Site">
+                <label for="checkboxSite">Site</label>
+                <input type="checkbox" name="itemcheck" id="checkboxId" value="Identidade Visual">
+                <label for="checkboxId">Identidade Visual</label>
+                <input type="checkbox" name="itemcheck" id="checkboxApp" value="Aplicativo">
+                <label for="checkboxApp">Aplicativo</label>
+                <input type="checkbox" name="itemcheck" id="checkboxLp" value="Landing Page">
+                <label for="checkboxLp">Landing Page</label>
+              </div>
+              <div id="inputs">
+                <input placeholder="Nome" type="text" name="name" id="nome">
+                <input placeholder="Email" type="text" name="email" id="email">
+                <input placeholder="Nos fale sobre seu projeto" type="text" name="" id="projeto">
+                <button onclick="pedidoWhats()">
+                  <img style="display:flex;width: 12%; height: auto; filter: invert(0%); position: relative;margin-left: 5%;padding-right: 5%;padding-bottom: 1%;" src="../src/whatsapp.png" alt="">
+                  Enviar Pedido
+                </button>
+                <div>
+                  <a href=""><img style="width: 20%; height: auto;" src="../src/logotipo-do-instagram.png" alt=""></a>
+                  <a href=""><img style="width: 20%; height: auto;" src="../src/whatsapp.png" alt=""></a>
+                  <a href=""><img style="width: 20%; height: auto;" src="../src/twitter.png" alt=""></a>
+                  <a href=""><img style="width: 20%; height: auto;" src="../src/github.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <div><p>footer</p></div>
+  </section>
+  <!--Footer para conter o contato-->
+  <script src="./modules/pedidoWhats.js"></script>
+  <script src="./modules/textType.js"></script><!--Animação de escrita no Home-->
+  <script src="./modules/btnHeader.js"></script><!--Botões do header da página-->
+  <script src="./modules/scrollPage.js"></script><!--Scroll horizontal e estilização de elementos secundários-->
+  <script src="main-page.js"></script>
+</body>
+</html>
